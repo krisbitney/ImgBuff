@@ -1,0 +1,374 @@
+
+:root {
+  --main-color-lightGray: #ECECEC;
+  --main-color-yellow: #F3D250;
+  --main-color-red: #F78888;
+  --main-color-darkBlue: #5DA2D5;
+  --main-color-lightBlue: #90CCF4;
+  /* Bootstrap 4 colors -> https://getbootstrap.com/ */
+    --blue: #007bff;
+    --indigo: #6610f2;
+    --purple: #6f42c1;
+    --pink: #e83e8c;
+    --red: #dc3545;
+    --orange: #fd7e14;
+    --yellow: #ffc107;
+    --green: #28a745;
+    --teal: #20c997;
+    --cyan: #17a2b8;
+    --white: #fff;
+    --gray: #6c757d;
+    --gray-dark: #343a40;
+    --primary: #007bff;
+    --secondary: #6c757d;
+    --success: #28a745;
+    --info: #17a2b8;
+    --warning: #ffc107;
+    --danger: #dc3545;
+    --light: #f8f9fa;
+    --dark: #343a40;
+   /* Bootstrap 4 break points -> https://getbootstrap.com/ */
+    --breakpoint-xs: 0;
+    --breakpoint-sm: 576px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 992px;
+    --breakpoint-xl: 1200px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+}
+
+/* modified from Bootstrap 4 -> https://getbootstrap.com/ */
+.card {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: .25rem;
+}
+/* modified from Bootstrap 4 -> https://getbootstrap.com/ */
+.card-body {
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    min-height: 1px;
+    padding: 1.25rem;
+}
+/* modified from Bootstrap 4 -> https://getbootstrap.com/ */
+.card-img {
+    border-radius: calc(.25rem - 1px);
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+}
+
+
+/* ----------------- Navigation Bar ----------------- */
+#navbar {
+  position: fixed;
+  top: 0;
+  margin: 0;
+  padding: 0;
+}
+
+#nav-list {
+  position: fixed;
+  top: 0;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  list-style-type: none;
+  overflow: hidden;
+  background-color: transparent;
+}
+
+.nav-item {
+  float: left;
+  display: block;
+}
+
+.nav-link {
+  display: block;
+  padding: 1rem 2rem;
+  text-decoration: none;
+  text-align: center;
+  color: black;
+  font-weight: bold;
+  font-family: 'Proza Libre', sans-serif;
+}
+
+.nav-item:hover, .nav-link:hover {
+  background-color: var(--blue);
+  color: var(--light);
+  border-radius: calc(.25rem - 1px);
+}
+
+
+/* ----------------- Main ----------------- */
+main {
+  padding-top: 1.6rem;
+}
+
+/* Fixes in-page navigation links with fixed position nav bar */
+section:before {
+  display: block;
+  content: "";
+  margin-top: -1.6rem;
+  height: 1.6rem;
+  visibility: hidden;
+}
+
+section {
+    padding-top: 3rem;
+    height: 100vh;
+    box-sizing: border-box;
+}
+
+.flex-col {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.flex-row {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+/* ----------------- Buff Image Section ----------------- */
+#buff-section {
+    background-color: var(--light);
+    justify-content: flex-start;
+}
+
+#jumbotron {
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+    height: 25vh;
+    width: 99vw;
+    background-color: var(--yellow);
+    text-align: center;
+}
+
+#img-app-container {
+    align-items: flex-end;
+}
+
+.img-app-block {
+    width: 40vw;
+    max-width: 600px;
+}
+
+#img-input {
+    display: none;
+}
+
+#img-input-label {
+    cursor: pointer;
+}
+
+.app-btn {
+    cursor: pointer;
+    margin-bottom: 0.5rem;
+    background-color: var(--blue);
+    color: var(--light);
+    outline: none;
+    border: none;
+    padding: 0.5rem 0.75rem;
+}
+
+.app-btn:hover {
+    text-shadow: 0px 0px 10px var(--light);
+}
+
+
+.img-app-card {
+    width: 320px;
+    height: 320px;
+    background-color: var(--white);
+}
+
+.img-app {
+    width: 320px;
+    height: auto;
+    max-height: 600px;
+    overflow: hidden;
+}
+
+/* ----------------- Examples Section ----------------- */
+#examples-section {
+    background-color: var(--dark);
+    color: var(--white);
+}
+
+.carousel {
+
+}
+
+.arrow {
+  border: solid var(--light);
+  border-width: 0 10px 10px 0;
+  display: inline-block;
+  padding: 10px;
+  cursor: pointer;
+  background-color: inherit;
+}
+
+.arrow:hover {
+    box-shadow: 7px 7px 1px var(--blue);
+}
+
+.arrow-right {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  margin-left: 10px;
+}
+
+.arrow-left {
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+  margin-right: 10px;
+}
+
+#examples-card {
+    width: 990px;
+    height: 370px;
+    background-color: var(--dark);
+    justify-content: space-around;
+
+}
+
+.img-example {
+    width: 320px;
+    height: 320px;
+}
+
+.img-example-caption {
+    padding: 0.5rem 0 0 0;
+    margin: 0;
+}
+
+
+/* ----------------- Neural Net Section ----------------- */
+#net-section {
+    background-color: var(--teal);
+}
+
+#net-info-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-gap: 1px;
+    grid-template-areas:
+      "chart chart caption"
+      "chart chart selectors";
+}
+
+#img-net-chart {
+    grid-area: chart;
+    width: 512px;
+    height: 512px;
+    background-color: var(--dark);
+}
+
+#net-caption-card {
+    grid-area: caption;
+    width: 250px;
+    height: 312px;
+    background-color: var(--dark);
+}
+
+#img-net-title {
+    margin: 0 auto;
+    padding-bottom: 0;
+    color: var(--white);
+}
+
+#img-net-caption {
+    margin: 0;
+    padding-top: 0;
+    color: var(--white);
+}
+
+#net-selectors {
+    grid-area: selectors;
+    width: 250px;
+    height: 195px;
+    flex-wrap: wrap;
+    background-color: var(--dark);
+}
+
+.net-select-btn {
+    background: transparent no-repeat;
+    border: none;
+    outline: none;
+    cursor:pointer;
+    color: var(--pink);
+    font-size: 1.5rem;
+}
+
+.net-select-btn:focus {
+    border: none;
+    outline: none;
+}
+
+.net-select-btn:hover {
+    color: var(--white);
+    text-shadow: 0px 0px 20px var(--purple);
+}
+
+/* ----------------- Contact Section ----------------- */
+#contact-section {
+    background-color: var(--white);
+    height: 200px;
+}
+
+#contact-link-list {
+    max-width: 1200px;
+    align-items: space-around;
+}
+
+.contact-link {
+    text-decoration: none;
+    font-size: 3rem;
+    color: var(--black);
+}
+
+.contact-link:hover {
+    text-shadow: 0px 0px 2px black;
+}
+
+/* ----------------- Media Queries ----------------- */
+/* I'm copying Bootstrap's break points */
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: --breakpoint-sm) { ... }
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: --breakpoint-md) { ... }
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: --breakpoint-lg) { ... }
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: --breakpoint-xl) { ... }

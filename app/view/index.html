@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- meta tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>ImgBuff: Better photo quality</title>
+    <!-- css -->
+    <link rel="stylesheet" type="text/css" href="/static/style.css">
+    <!-- client-side script -->
+    <script src="/static/strings.js"></script>
+    <script src="/static/client.js"></script>
+    <!-- imports -->
+    <script src="https://kit.fontawesome.com/b064b7b394.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <nav id="navbar">
+      <ul id="nav-list">
+        <li class="nav-item"><a class="nav-link" href="#buff-section">ImgBuff</a></li>
+        <li class="nav-item"><a class="nav-link" href="#examples-section">Examples</a></li>
+        <li class="nav-item"><a class="nav-link" href="#net-section">Neural Network</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact-section">Contact</a></li>
+      </ul>
+    </nav>
+
+    <main class="flex-col">
+
+        <section id="buff-section" class="flex-col">
+            <div id="jumbotron">
+                <h1>Colorize your old photos</h1>
+                <h4>It's easy: Select a photo and click Buff</h4>
+                <h4>Don't have a grayscale photo but want to try it out? Select a color photo. ImgBuff will convert it to grayscale before colorization.</h4>
+            </div>
+
+            <div id="img-app-container" class="flex-row">
+                <div class="flex-col img-app-block">
+                    <input type="file" id="img-input" name="img-input" accept="image/*" onchange="showSelectedImage(this)" aria-describedby="file-submit-btn">
+                    <!-- <label for="file-browse-btn" id="img-input-label"></label> -->
+                    <button id="file-browse-btn" class="app-btn" type="button" onclick="fileBrowseClick()"><i id="browse-btn-icon" class="fas fa-folder-open"></i> Browse</button>
+                    <div class="card img-app-card">
+                        <img id="img-original" class="img-app card-img" src="">
+                    </div>
+                </div>
+                <div class="flex-col img-app-block">
+                    <button id="file-submit-btn" class="app-btn" type="submit" onclick="colorizeImage()"><i class="fas fa-cloud-upload-alt"></i> Buff</button>
+                    <div class="card img-app-card">
+                        <img id="img-new" class="img-app card-img" src="">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="examples-section" class="flex-col">
+            <h1>See what ImgBuff can do!</h1>
+            <div class="carousel flex-row">
+                <button type="button" id="examples-left-btn" class="arrow arrow-left" onClick="cycleCarousel(true, 2)"></button>
+                <div id="examples-card" class="flex-row">
+                    <div class="flex-col">
+                        <img id="img-example-color" class="img-example card-img" src="/resources/example_color_0.png">
+                        <p class="img-example-caption">Original</p>
+                    </div>
+                    <div class="flex-col">
+                        <img id="img-example-grayscale" class="img-example card-img" src="/resources/example_grayscale_0.png">
+                        <p class="img-example-caption">Grayscale</p>
+                    </div>
+                    <div class="flex-col">
+                        <img id="img-example-colorized" class="img-example card-img" src="/resources/example_colorized_0.png">
+                        <p class="img-example-caption">Colorized</p>
+                    </div>
+                </div>
+                <button type="button" id="examples-right-btn" class="arrow arrow-right" onClick="cycleCarousel(false, 2)"></button>
+            </div>
+            <h1>&nbsp</h1>
+        </section>
+
+        <section id="net-section" class="flex-col">
+            <h1>Learn about the neural network</h1>
+            <div id="net-info-container">
+                <img id="img-net-chart" src="/resources/net_chart_0.png" class="card-img">
+                <div id="net-caption-card" class="card">
+                    <h4 id="img-net-title" class="card-body">Lorem Ipsum</h4>
+                    <p id="img-net-caption" class="card-body">1 Lorem ipsum dolor sit amet, purto scripta invidunt duo eu. Nec laudem complectitur ei, diam prima placerat ne eum, te perfecto legendos necessitatibus mei. Pro id delenit maiorum democritum. Laudem facete nominati cu quo, sit menandri definitiones ea. Mea cu corpora vivendum necessitatibus, mea ipsum lobortis definiebas ex, sea munere delicatissimi id.</p>
+                </div>
+                <div id="net-selectors" class="card flex-row">
+                    <button id="net-select-arch" class="net-select-btn" type="button" onClick="selectNetItem(this.id)"><i class="fas fa-building"></i></button>
+                    <button id="net-select-encoder" class="net-select-btn" type="button" onClick="selectNetItem(this.id)"><i class="fas fa-sitemap" style="transform: rotate(270deg);"></i></button>
+                    <button id="net-select-decoder" class="net-select-btn" type="button" onClick="selectNetItem(this.id)"><i class="fas fa-sitemap" style="transform: rotate(90deg);"></i></button>
+                    <button id="net-select-train" class="net-select-btn" type="button" onClick="selectNetItem(this.id)"><i class="fas fa-dumbbell"></i></button>
+                    <button id="net-select-data" class="net-select-btn" type="button" onClick="selectNetItem(this.id)"><i class="fas fa-database"></i></button>
+                    <button id="net-select-chart1" class="net-select-btn" type="button" onClick="selectNetItem(this.id)"><i class="fas fa-chart-line"></i></button>
+                    <button id="net-select-chart2" class="net-select-btn" type="button" onClick="selectNetItem(this.id)"><i class="fas fa-chart-bar"></i></button>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact-section" class="flex-col">
+            <div id="contact-link-list" class="flex-row">
+                <div class="flex-row">
+                    <a class="contact-link" target="_blank" href="https://github.com/krisbitney"><i class="fab fa-github"></i> GitHub</a>
+                </div>
+                <div class="flex-row">
+                    <a class="contact-link" target="_blank" href="mailto:kristoferbitney@outlook.com"><i class="fas fa-at"></i> Email</a>
+                </div>
+                <div class="flex-row">
+                    <a class="contact-link" target="_blank" href="https://www.linkedin.com/in/bitney/"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+</body>
+</html>
