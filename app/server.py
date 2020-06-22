@@ -12,11 +12,14 @@ from fastai.basic_train import Learner, load_learner
 from fastai.vision import pil2tensor, image2np, Image as FImage
 import numpy as np
 
+import app.utils
+
 
 # paths
 path = Path(__file__).parent
 colorizer_url = 'https://www.dropbox.com/s/tfvwkzoggnl8bon/colorizer.pkl?dl=1'
 colorizer_fn = 'colorizer.pkl'
+#learn_path = path/'models'
 
 
 async def homepage(request: Request) -> Response:
@@ -25,9 +28,11 @@ async def homepage(request: Request) -> Response:
 
 
 async def setup_learner() -> Learner:
-    await download_large_file(colorizer_url, path / colorizer_fn, 1024 * 1204)
+    await download_large_file(colorizer_url, path/colorizer_fn, 1024 * 1024)
+    #await download_large_file(colorizer_url, learn_path / colorizer_fn, 1024 * 1024)
     try:
         learner = load_learner(path, colorizer_fn)
+        #learner = app.utils.load_gan(learn_path/'colorizer')
         return learner
     except RuntimeError as e:
         raise

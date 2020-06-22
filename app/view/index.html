@@ -79,10 +79,13 @@
         <section id="net-section" class="flex-col">
             <h1>Learn about the neural network</h1>
             <div id="net-info-container">
-                <img id="img-net-chart" src="/resources/net_chart_0.png" class="card-img">
+                <div id="net-img-card" class="card flex-col">
+                    <img id="img-net-chart" src="/resources/UNet.png" class="card-img">
+                    <p id="img-net-citation" class="card-body">Source: Zeiler, M. D., & Fergus, R. (2013). <em>Visualizing and Understanding Convolutional Networks.</em></p>
+                </div>
                 <div id="net-caption-card" class="card">
-                    <h4 id="img-net-title" class="card-body">Lorem Ipsum</h4>
-                    <p id="img-net-caption" class="card-body">1 Lorem ipsum dolor sit amet, purto scripta invidunt duo eu. Nec laudem complectitur ei, diam prima placerat ne eum, te perfecto legendos necessitatibus mei. Pro id delenit maiorum democritum. Laudem facete nominati cu quo, sit menandri definitiones ea. Mea cu corpora vivendum necessitatibus, mea ipsum lobortis definiebas ex, sea munere delicatissimi id.</p>
+                    <h4 id="img-net-title" class="card-body">UNet Architecture</h4>
+                    <p id="img-net-caption" class="card-body">The neural network uses a UNet architecture. The network first breaks down an image into patterns using an 'encoder', then rebuilds a new image with an analog structure called a 'decoder'. Taking grayscale images as input, the model learns patterns and rebuilds them as color images.</p>
                 </div>
                 <div id="net-selectors" class="card flex-row">
                     <button id="net-select-arch" class="net-select-btn" type="button" onClick="selectNetItem(this.id)"><i class="fas fa-building"></i></button>
@@ -90,7 +93,7 @@
                     <button id="net-select-decoder" class="net-select-btn" type="button" onClick="selectNetItem(this.id)"><i class="fas fa-sitemap" style="transform: rotate(90deg);"></i></button>
                     <button id="net-select-train" class="net-select-btn" type="button" onClick="selectNetItem(this.id)"><i class="fas fa-dumbbell"></i></button>
                     <button id="net-select-data" class="net-select-btn" type="button" onClick="selectNetItem(this.id)"><i class="fas fa-database"></i></button>
-                    <button id="net-select-chart1" class="net-select-btn" type="button" onClick="selectNetItem(this.id)"><i class="fas fa-chart-line"></i></button>
+                    <button id="net-select-batchnorm" class="net-select-btn" type="button" onClick="selectNetItem(this.id)">&sigma;</button>
                     <button id="net-select-chart2" class="net-select-btn" type="button" onClick="selectNetItem(this.id)"><i class="fas fa-chart-bar"></i></button>
                 </div>
             </div>

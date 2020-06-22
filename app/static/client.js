@@ -116,43 +116,59 @@ function cycleCarousel(forward, n) {
 }
 
 function selectNetItem(id) {
+    let titleElement = document.getElementById("img-net-title");
     let captionElement = document.getElementById("img-net-caption");
     let imgElement = document.getElementById("img-net-chart");
+    let citationElement = document.getElementById("img-net-citation");
     switch (id) {
         case "net-select-arch":
+            titleElement.innerHTML = netSelectArchTitle;
             captionElement.innerHTML = netSelectArchStr;
-            imgElement.src = imgPath + "net_chart_0.png";
+            imgElement.src = imgPath + "UNet.png";
             imgElement.alt = netSelectArchImgAlt;
+            citationElement.innerHTML = netSelectArchCitation;
             break;
         case "net-select-encoder":
+            titleElement.innerHTML = netSelectEncoderTitle;
             captionElement.innerHTML = netSelectEncoderStr;
-            imgElement.src = imgPath + "net_chart_1.png";
+            imgElement.src = imgPath + "skip_connection.png";
             imgElement.alt = netSelectEncoderImgAlt;
+            citationElement.innerHTML = netSelectEncoderCitation;
             break;
         case "net-select-decoder":
+            titleElement.innerHTML = netSelectDecoderTitle;
             captionElement.innerHTML = netSelectDecoderStr;
-            imgElement.src = imgPath + "net_chart_0.png";
+            imgElement.src = imgPath + "visualizing_cnn.png";
             imgElement.alt = netSelectDecoderImgAlt;
+            citationElement.innerHTML = netSelectDecoderCitation;
             break;
         case "net-select-train":
+            titleElement.innerHTML = netSelectTrainTitle;
             captionElement.innerHTML = netSelectTrainStr;
-            imgElement.src = imgPath + "net_chart_1.png";
+            imgElement.src = imgPath + "UNet.png";
             imgElement.alt = netSelectTrainImgAlt;
+            citationElement.innerHTML = netSelectTrainCitation;
             break;
         case "net-select-data":
+            titleElement.innerHTML = netSelectDataTitle;
             captionElement.innerHTML = netSelectDataStr;
-            imgElement.src = imgPath + "net_chart_0.png";
+            imgElement.src = imgPath + "coco.png";
             imgElement.alt = netSelectDataImgAlt;
+            citationElement.innerHTML = netSelectDataCitation;
             break;
-        case "net-select-chart1":
-            captionElement.innerHTML = netSelectChart1Str;
-            imgElement.src = imgPath + "net_chart_1.png";
-            imgElement.alt = netSelectChart1ImgAlt;
+        case "net-select-batchnorm":
+            titleElement.innerHTML = netSelectNormTitle;
+            captionElement.innerHTML = netSelectNormStr;
+            imgElement.src = imgPath + "batch_norm_loss.png";
+            imgElement.alt = netSelectNormImgAlt;
+            citationElement.innerHTML = netSelectNormCitation;
             break;
         case "net-select-chart2":
+            titleElement.innerHTML = netSelectChart2Title;
             captionElement.innerHTML = netSelectChart2Str;
-            imgElement.src = imgPath + "net_chart_0.png";
+            imgElement.src = imgPath + "UNet.png";
             imgElement.alt = netSelectChart2ImgAlt;
+            citationElement.innerHTML = netSelectChart2Citation;
             break;
         default:
             break;

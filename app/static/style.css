@@ -284,11 +284,25 @@ section {
       "chart chart selectors";
 }
 
-#img-net-chart {
+#net-img-card {
     grid-area: chart;
     width: 512px;
     height: 512px;
     background-color: var(--dark);
+    overflow: hidden;
+}
+
+#img-net-chart {
+    padding: 6px;
+    width: 500px;
+    height: 450px;
+}
+
+#img-net-citation {
+    margin: 0;
+    padding: 0.5rem;
+    font-size: 0.75rem;
+    color: var(--light);
 }
 
 #net-caption-card {
@@ -335,6 +349,11 @@ section {
 .net-select-btn:hover {
     color: var(--white);
     text-shadow: 0px 0px 20px var(--purple);
+}
+
+#net-select-batchnorm {
+    font-size: 2rem;
+    font-weight: bold;
 }
 
 /* ----------------- Contact Section ----------------- */
