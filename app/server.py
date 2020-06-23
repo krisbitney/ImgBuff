@@ -75,8 +75,8 @@ async def colorize_image(request: Request) -> Response:
 # app and routes
 routes = [
     Route('/', homepage),
-    Mount('/static', StaticFiles(directory='static')),
-    Mount('/resources', StaticFiles(directory='resources')),
+    Mount('/static', StaticFiles(directory=path/'static')),
+    Mount('/resources', StaticFiles(directory=path/'resources')),
     Route('/colorizeImage', colorize_image, methods=['POST'])
 ]
 app = Starlette(debug=True, routes=routes)
