@@ -51,7 +51,7 @@ colorizer = asyncio.run(setup_learner())
 
 
 async def save_jpg(img: FImage, fn: typing.IO):
-    "Save FastAI Image to disk"
+    # save FastAI Image to disk
     x = image2np(img.data * 255).astype(np.uint8)
     Image.fromarray(x).save(fn, format='jpeg', quality=100)
 

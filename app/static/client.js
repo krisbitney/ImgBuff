@@ -163,13 +163,6 @@ function selectNetItem(id) {
             imgElement.alt = netSelectNormImgAlt;
             citationElement.innerHTML = netSelectNormCitation;
             break;
-        case "net-select-chart2":
-            titleElement.innerHTML = netSelectChart2Title;
-            captionElement.innerHTML = netSelectChart2Str;
-            imgElement.src = imgPath + "UNet.png";
-            imgElement.alt = netSelectChart2ImgAlt;
-            citationElement.innerHTML = netSelectChart2Citation;
-            break;
         default:
             break;
     }

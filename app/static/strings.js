@@ -43,9 +43,4 @@ var netSelectNormStr = "ResNet makes heavy use of batch normalization. A batch n
 var netSelectNormImgAlt = "Batch normalization diagram";
 var netSelectNormCitation = "Source: Santurkar, S., Tsipras, D., Ilyas, A., & Madry, A. (2019). <em>How Does Batch Normalization Help Optimization?</em>"
 
-var netSelectChart2Title = "";
-var netSelectChart2Str = "1 Lorem ipsum dolor sit amet, purto scripta invidunt duo eu. Nec laudem complectitur ei, diam prima placerat ne eum, te perfecto legendos necessitatibus mei. Pro id delenit maiorum democritum. Laudem facete nominati cu quo, sit menandri definitiones ea. Mea cu corpora vivendum necessitatibus, mea ipsum lobortis definiebas ex, sea munere delicatissimi id.";
-var netSelectChart2ImgAlt = "";
-var netSelectChart2Citation = "";
-
 
