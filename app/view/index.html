@@ -33,8 +33,8 @@
         <section id="buff-section" class="flex-col">
             <div id="jumbotron">
                 <h1 id="buff-title">colorize your grayscale photos</h1>
-                <h4>It's easy: Select a photo and click Buff</h4>
-                <h4>Don't have a grayscale photo but want to try it out? Select a color photo. ImgBuff will convert it to grayscale before colorization.</h4>
+                <h4 id="buff-instructions">It's easy: Select a photo and click Buff</h4>
+                <h4 id="buff-try-it-text">Don't have a grayscale photo but want to try it out? Select a color photo. ImgBuff will convert it to grayscale before colorization.</h4>
             </div>
 
             <div id="img-app-container" class="flex-row">
@@ -42,7 +42,7 @@
                     <input type="file" id="img-input" name="img-input" accept="image/*" onchange="showSelectedImage(this)" aria-describedby="file-submit-btn">
                     <!-- <label for="file-browse-btn" id="img-input-label"></label> -->
                     <button id="file-browse-btn" class="app-btn" type="button" onclick="fileBrowseClick()"><i id="browse-btn-icon" class="fas fa-folder-open"></i> Browse</button>
-                    <div class="card img-app-card">
+                    <div id="img-original-card" class="card img-app-card">
                         <img id="img-original" class="img-app card-img" src="">
                     </div>
                 </div>

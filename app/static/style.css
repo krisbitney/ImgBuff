@@ -29,12 +29,6 @@
     --danger: #dc3545;
     --light: #f8f9fa;
     --dark: #343a40;
-   /* Bootstrap 4 break points -> https://getbootstrap.com/ */
-    --breakpoint-xs: 0;
-    --breakpoint-sm: 576px;
-    --breakpoint-md: 768px;
-    --breakpoint-lg: 992px;
-    --breakpoint-xl: 1200px;
 }
 
 html {
@@ -405,14 +399,53 @@ section {
 /* ----------------- Media Queries ----------------- */
 /* I'm copying Bootstrap's break points */
 
-/* Small devices (landscape phones, 576px and up) */
-@media (min-width: --breakpoint-sm) { ... }
+/* Small devices (landscape phones, 576px and lower) */
+@media (max-width: 576px) { }
 
-/* Medium devices (tablets, 768px and up) */
-@media (min-width: --breakpoint-md) { ... }
+/* Medium devices (tablets, 768px and lower) */
+@media (max-width: 768px) {
 
-/* Large devices (desktops, 992px and up) */
-@media (min-width: --breakpoint-lg) { ... }
+    body {
+        background-color: var(--darkBlue);
+    }
 
-/* Extra large devices (large desktops, 1200px and up) */
-@media (min-width: --breakpoint-xl) { ... }
+    #navbar, #examples-section, #net-section {
+        display: none;
+    }
+
+    #buff-section, #contact-section {
+        height: auto;
+        width: 100vw;
+    }
+
+    #jumbotron {
+        margin-top: 1rem;
+        margin-bottom: 1.5rem;
+        height: auto;
+    }
+
+    #buff-try-it-text, #buff-instructions, #img-original-card, #img-original-card, #img-original {
+        display: none;
+    }
+
+    #img-app-container {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding-bottom: 1rem;
+    }
+
+    #contact-link-list {
+        flex-direction: column;
+    }
+
+    .contact-link {
+        font-size: 2rem;
+    }
+}
+
+/* Large devices (desktops, 992px and lower) */
+@media (max-width: 992px) {  }
+
+/* Extra large devices (large desktops, 1200px and lower) */
+@media (max-width: 1200px) {  }

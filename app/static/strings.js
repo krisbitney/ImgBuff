@@ -29,12 +29,12 @@ var netSelectDecoderImgAlt = "Visualizing Convolutional Neural Networks graphic"
 var netSelectDecoderCitation = "Source: Zeiler, M. D., & Fergus, R. (2013). <em>Visualizing and Understanding Convolutional Networks.";
 
 var netSelectTrainTitle = "Training";
-var netSelectTrainStr = "2 Lorem ipsum dolor sit amet, purto scripta invidunt duo eu. Nec laudem complectitur ei, diam prima placerat ne eum, te perfecto legendos necessitatibus mei. Pro id delenit maiorum democritum. Laudem facete nominati cu quo, sit menandri definitiones ea. Mea cu corpora vivendum necessitatibus, mea ipsum lobortis definiebas ex, sea munere delicatissimi id.";
-var netSelectTrainImgAlt = "";
+var netSelectTrainStr = "The network was trained for more than 100 hours. As networking training proceeds, the network learns to recognize patterns and assign colors to those patterns. For example, it learned to recognize bananas and color them yellow.";
+var netSelectTrainImgAlt = "Chart of loss function over time";
 var netSelectTrainCitation = "Created by author using FastAI library";
 
 var netSelectDataTitle = "COCO Dataset";
-var netSelectDataStr = "The neural network is trained using a 118,000 image subset of the Common Objects in Context (COCO) dataset. COCO is a rich, diverse collection of everyday photos taken by ordinary people and uploaded to Flickr.";
+var netSelectDataStr = "The neural network was trained using a 118,000 image subset of the Common Objects in Context (COCO) dataset. COCO is a rich, diverse collection of everyday photos taken by ordinary people and uploaded to Flickr.";
 var netSelectDataImgAlt = "COCO dataset summary";
 var netSelectDataCitation = "Source: http://cocodataset.org/";
 
