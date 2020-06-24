@@ -14,7 +14,7 @@ var exampleColorizedImgAltPre = "Example colorized image ";
 
 /* Net section */
 var netSelectArchTitle = "UNet Architecture";
-var netSelectArchStr = "The neural network uses a UNet architecture. The network first breaks down an image into patterns using an 'encoder', then rebuilds a new image with an analog structure called a 'decoder'. Taking grayscale images as input, the model learns patterns and rebuilds them as color images.";
+var netSelectArchStr = "ImgBuff uses a neural network to colorize images. The neural network uses a UNet architecture. The network first breaks down an image into patterns using an 'encoder', then rebuilds a new image with an analog structure called a 'decoder'.";
 var netSelectArchImgAlt = "UNet neural network architecture diagram";
 var netSelectArchCitation = "Source: Ronneberger, O., Fischer, P., & Brox, T. (2015). <em>U-Net: Convolutional Networks for Biomedical Image Segmentation.</em>";
 

@@ -13,6 +13,8 @@
     <script src="/static/client.js"></script>
     <!-- imports -->
     <script src="https://kit.fontawesome.com/b064b7b394.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;1,300;1,400&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -30,7 +32,7 @@
 
         <section id="buff-section" class="flex-col">
             <div id="jumbotron">
-                <h1>Colorize your old photos</h1>
+                <h1 id="buff-title">colorize your grayscale photos</h1>
                 <h4>It's easy: Select a photo and click Buff</h4>
                 <h4>Don't have a grayscale photo but want to try it out? Select a color photo. ImgBuff will convert it to grayscale before colorization.</h4>
             </div>
@@ -54,7 +56,7 @@
         </section>
 
         <section id="examples-section" class="flex-col">
-            <h1>See what ImgBuff can do!</h1>
+            <h1>see what ImgBuff can do</h1>
             <div class="carousel flex-row">
                 <button type="button" id="examples-left-btn" class="arrow arrow-left" onClick="cycleCarousel(true, 2)"></button>
                 <div id="examples-card" class="flex-row">
@@ -77,7 +79,7 @@
         </section>
 
         <section id="net-section" class="flex-col">
-            <h1>Learn about the neural network</h1>
+            <h1>learn about the ImgBuff neural network</h1>
             <div id="net-info-container">
                 <div id="net-img-card" class="card flex-col">
                     <img id="img-net-chart" src="/resources/UNet.png" class="card-img">
@@ -85,7 +87,7 @@
                 </div>
                 <div id="net-caption-card" class="card">
                     <h4 id="img-net-title" class="card-body">UNet Architecture</h4>
-                    <p id="img-net-caption" class="card-body">The neural network uses a UNet architecture. The network first breaks down an image into patterns using an 'encoder', then rebuilds a new image with an analog structure called a 'decoder'. Taking grayscale images as input, the model learns patterns and rebuilds them as color images.</p>
+                    <p id="img-net-caption" class="card-body">ImgBuff uses a neural network to colorize images. The neural network uses a UNet architecture. The network first breaks down an image into patterns using an 'encoder', then rebuilds a new image with an analog structure called a 'decoder'.</p>
                 </div>
                 <div id="net-selectors" class="card flex-row">
                     <button id="net-select-arch" class="net-select-btn" type="button" onClick="selectNetItem(this.id)"><i class="fas fa-building"></i></button>

@@ -6,7 +6,9 @@
   --main-color-darkBlue: #5DA2D5;
   --main-color-lightBlue: #90CCF4;
   /* Bootstrap 4 colors -> https://getbootstrap.com/ */
-    --blue: #007bff;
+    /* --blue: #007bff; */
+    --darkBlue: #011627;
+    --blue: #4A8EFA;
     --indigo: #6610f2;
     --purple: #6f42c1;
     --pink: #e83e8c;
@@ -41,6 +43,21 @@ html {
 
 body {
   margin: 0;
+  font-family: 'Open Sans', sans-serif;
+}
+
+h1 {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 400;
+    font-size: 2.25rem;
+    letter-spacing: 0.05rem;
+}
+
+h4 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    letter-spacing: 0.1rem;
+    font-size: 1.25rem;
 }
 
 /* modified from Bootstrap 4 -> https://getbootstrap.com/ */
@@ -100,7 +117,7 @@ body {
   padding: 1rem 2rem;
   text-decoration: none;
   text-align: center;
-  color: black;
+  color: var(--light);
   font-weight: bold;
   font-family: 'Proza Libre', sans-serif;
 }
@@ -157,7 +174,7 @@ section {
 
 /* ----------------- Buff Image Section ----------------- */
 #buff-section {
-    background-color: var(--light);
+    background-color: var(--darkBlue);
     justify-content: flex-start;
 }
 
@@ -168,6 +185,10 @@ section {
     width: 99vw;
     background-color: var(--yellow);
     text-align: center;
+}
+
+#buff-title {
+    text-transform: uppercase;
 }
 
 #img-app-container {
@@ -195,6 +216,7 @@ section {
     outline: none;
     border: none;
     padding: 0.5rem 0.75rem;
+    border-radius: calc(.25rem - 1px);
 }
 
 .app-btn:hover {
@@ -217,8 +239,8 @@ section {
 
 /* ----------------- Examples Section ----------------- */
 #examples-section {
-    background-color: var(--dark);
-    color: var(--white);
+    background-color: var(--darkBlue);
+    color: var(--light);
 }
 
 .carousel {
@@ -253,7 +275,7 @@ section {
 #examples-card {
     width: 990px;
     height: 370px;
-    background-color: var(--dark);
+    background-color: var(--darkBlue);
     justify-content: space-around;
 
 }
@@ -271,7 +293,8 @@ section {
 
 /* ----------------- Neural Net Section ----------------- */
 #net-section {
-    background-color: var(--teal);
+    background-color: var(--darkBlue);
+    color: var(--light);
 }
 
 #net-info-container {
@@ -316,12 +339,14 @@ section {
     margin: 0 auto;
     padding-bottom: 0;
     color: var(--white);
+    font-size: 1rem;
 }
 
 #img-net-caption {
     margin: 0;
     padding-top: 0;
     color: var(--white);
+    font-size: 0.8rem;
 }
 
 #net-selectors {
@@ -358,7 +383,7 @@ section {
 
 /* ----------------- Contact Section ----------------- */
 #contact-section {
-    background-color: var(--white);
+    background-color: var(--yellow);
     height: 200px;
 }
 
