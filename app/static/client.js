@@ -145,7 +145,7 @@ function selectNetItem(id) {
         case "net-select-train":
             titleElement.innerHTML = netSelectTrainTitle;
             captionElement.innerHTML = netSelectTrainStr;
-            imgElement.src = imgPath + "UNet.png";
+            imgElement.src = imgPath + "losses.png";
             imgElement.alt = netSelectTrainImgAlt;
             citationElement.innerHTML = netSelectTrainCitation;
             break;
