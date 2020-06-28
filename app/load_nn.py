@@ -2,12 +2,12 @@ from fastai.vision import *
 from fastai.vision.gan import *
 
 parent = Path(__file__).parent
-path_learner = parent/'models'
+path_data = parent/'models'
 color = 'color'
 grayscale = 'grayscale'
 colorized = 'colorized'
-path_color = path_learner/color
-path_gray = path_learner/grayscale
+path_color = path_data/color
+path_gray = path_data/grayscale
 if not path_color.exists():
     path_color.mkdir(parents=True)
 if not path_gray.exists():
@@ -30,7 +30,7 @@ def get_generator_data(bs, size, p=1.):
 def get_critic_data(classes, bs, size):
     # data source
     src = (ImageList
-           .from_folder(path_learner, include=classes)
+           .from_folder(path_data, include=classes)
            .split_none()
            .label_from_folder(classes=classes))
     # data bunch
@@ -68,8 +68,5 @@ def refresh_gan(version, crit_thresh=0.65, loss_weights=(1.,50.), bs=1, size=320
                                         opt_func=optim.Adam, wd=wd)
     gan = GANLearner.from_learners(generator, critic, weights_gen=loss_weights,
                                     show_img=True, switcher=switcher,
-                                    opt_func=optim.Adam, wd=wd)
-    gan.path = Path('/app/models')
-    gan.model_dir = Path('/app/models')
-    gan.load(version)
+                                    opt_func=optim.Adam, wd=wd).load(version)
     return generator

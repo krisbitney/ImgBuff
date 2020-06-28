@@ -17,8 +17,8 @@ import load_nn
 # paths
 path = Path(__file__).parent
 colorizer_url = 'https://www.dropbox.com/s/ayfsa7fz98se682/colorizer.pth?dl=1'
-colorizer_fn = 'models/colorizer.pth'
-load_path = path/'models/colorizer'
+colorizer_fn = 'colorizer.pth'
+load_path = Path('colorizer')
 
 async def homepage(request: Request) -> Response:
     html_file = path / 'view' / 'index.html'
