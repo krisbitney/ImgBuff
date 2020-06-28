@@ -16,7 +16,7 @@ import load_nn
 
 # paths
 path = Path(__file__).parent
-colorizer_url = 'https://www.dropbox.com/s/ayfsa7fz98se682/colorizer.pth?dl=1'
+colorizer_url = 'https://www.dropbox.com/s/vp5jrg12sz5x9i3/colorizer.pth?dl=1'
 colorizer_fn = 'colorizer.pth'
 load_path = Path('colorizer')
 
