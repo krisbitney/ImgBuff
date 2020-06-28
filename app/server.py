@@ -66,7 +66,7 @@ async def colorize_image(request: Request) -> Response:
         img = img.convert('L')
     # process image with neural net
     fimg = FImage(pil2tensor(img, np.float32).div_(255))
-    colorized_img = colorizer.predict(fimg)
+    colorized_img = colorizer.predict(fimg)[0]
     # send response with colorized image
     buffer = io.BytesIO()
     await save_jpg(colorized_img, buffer)
