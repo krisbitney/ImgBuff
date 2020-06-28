@@ -20,6 +20,7 @@ colorizer_url = 'https://www.dropbox.com/s/vp5jrg12sz5x9i3/colorizer.pth?dl=1'
 colorizer_fn = 'colorizer.pth'
 load_path = Path('colorizer')
 
+
 async def homepage(request: Request) -> Response:
     html_file = path / 'view' / 'index.html'
     return HTMLResponse(html_file.open().read())
@@ -55,6 +56,7 @@ async def save_jpg(img: FImage, fn: typing.IO):
     # save FastAI Image to disk
     x = image2np(img.data * 255).astype(np.uint8)
     Image.fromarray(x).save(fn, format='jpeg', quality=100)
+
 
 async def colorize_image(request: Request) -> Response:
     # get image
