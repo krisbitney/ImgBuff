@@ -29,7 +29,6 @@ async def setup_learner() -> Learner:
     await download_large_file(colorizer_url, path/colorizer_fn, 1024 * 1024)
     try:
         learner = load_nn.refresh_gan(load_path)
-        #learner.gen_mode = True
         return learner
     except RuntimeError as e:
         raise
@@ -67,7 +66,7 @@ async def colorize_image(request: Request) -> Response:
         img = img.convert('L')
     # process image with neural net
     fimg = FImage(pil2tensor(img, np.float32).div_(255))
-    colorized_img = colorizer.predict(fimg)[0]
+    colorized_img = colorizer.predict(fimg)
     # send response with colorized image
     buffer = io.BytesIO()
     await save_jpg(colorized_img, buffer)
