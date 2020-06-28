@@ -29,7 +29,7 @@ async def setup_learner() -> Learner:
     await download_large_file(colorizer_url, path/colorizer_fn, 1024 * 1024)
     try:
         learner = load_nn.refresh_gan(load_path)
-        learner.gen_mode = True
+        #learner.gen_mode = True
         return learner
     except RuntimeError as e:
         raise
