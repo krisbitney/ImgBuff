@@ -68,5 +68,7 @@ def refresh_gan(version, crit_thresh=0.65, loss_weights=(1.,50.), bs=1, size=320
                                         opt_func=optim.Adam, wd=wd)
     gan = GANLearner.from_learners(generator, critic, weights_gen=loss_weights,
                                     show_img=True, switcher=switcher,
-                                    opt_func=optim.Adam, wd=wd).load(version)
+                                    opt_func=optim.Adam, wd=wd)\
+    gan.path = parent
+    gan = gan.load(version)
     return generator
