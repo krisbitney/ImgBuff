@@ -73,5 +73,4 @@ def refresh_gan(version, crit_thresh=0.65, loss_weights=(1.,50.), bs=1, size=320
                                     opt_func=optim.Adam, wd=wd)
     gan.path = Path('/app/')
     gan.model_dir = Path('/app/')
-    gan.load(version)
     return generator
