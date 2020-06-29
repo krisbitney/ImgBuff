@@ -74,4 +74,4 @@ def refresh_gan(version, crit_thresh=0.65, loss_weights=(1.,50.), bs=1, size=320
     gan.path = parent.parent
     gan.model_dir = parent.parent
     gan.load(version)
-    return gan
+    return generator
