@@ -27,7 +27,7 @@ async def homepage(request: Request) -> Response:
 
 
 async def setup_learner() -> Learner:
-    await download_large_file(colorizer_url, path/colorizer_fn, 1024 * 1024)
+    await download_large_file(colorizer_url, path/colorizer_fn, 10 * 1024 * 1024)
     try:
         learner = load_nn.refresh_gan(load_path)
         return learner
