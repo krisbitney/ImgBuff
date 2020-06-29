@@ -60,8 +60,8 @@ def refresh_gan(version, crit_thresh=0.65, loss_weights=(1.,50.), bs=1, size=320
     generator = get_generator(data_gen)
     critic = get_critic(data_crit, metrics=None)
     switcher = partial(AdaptiveGANSwitcher, critic_thresh=crit_thresh)
-    generator.path = Path('app/')
-    generator.model_dir = Path('app/')
+    generator.path = Path('/')
+    generator.model_dir = Path('/')
     if version == 'pre':
         generator.load('gen-pre')
         critic.load('critic-pre')
@@ -71,7 +71,7 @@ def refresh_gan(version, crit_thresh=0.65, loss_weights=(1.,50.), bs=1, size=320
     gan = GANLearner.from_learners(generator, critic, weights_gen=loss_weights,
                                     show_img=True, switcher=switcher,
                                     opt_func=optim.Adam, wd=wd)
-    gan.path = Path('app/')
-    gan.model_dir = Path('app/')
+    gan.path = Path('/')
+    gan.model_dir = Path('/')
     gan.load(version)
     return gan
