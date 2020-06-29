@@ -18,7 +18,7 @@ import load_nn
 path = Path(__file__).parent
 colorizer_url = 'https://www.dropbox.com/s/vp5jrg12sz5x9i3/colorizer.pth?dl=1'
 colorizer_fn = 'colorizer.pth'
-load_path = Path('colorizer')
+load_path = path/'colorizer'
 
 
 async def homepage(request: Request) -> Response:
@@ -27,7 +27,7 @@ async def homepage(request: Request) -> Response:
 
 
 async def setup_learner() -> Learner:
-    await download_large_file(colorizer_url, path/colorizer_fn, 10 * 1024 * 1024)
+    await download_large_file(colorizer_url, path/colorizer_fn, 4 * 1024 * 1024)
     try:
         learner = load_nn.refresh_gan(load_path)
         return learner
