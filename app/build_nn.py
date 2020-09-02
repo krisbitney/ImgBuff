@@ -1,6 +1,9 @@
 from fastai.vision import *
 from fastai.vision.gan import *
 
+# This module contains functions used to load the neural network from pytorch
+
+# paths
 parent = Path(__file__).parent
 path_data = parent/'models'
 color = 'color'
@@ -39,22 +42,24 @@ def get_critic_data(classes, bs, size):
     return data
 
 
-arch = models.resnet34
-loss_gen = MSELossFlat()
-wd = 1e-3
 def get_generator(data_gen):
+    wd = 1e-3
+    arch = models.resnet34
+    loss_gen = MSELossFlat()
     return unet_learner(data_gen, arch, loss_func=loss_gen,
                         wd=wd, blur=True, norm_type=NormType.Weight,
                         self_attention=True)
 
 
-loss_crit = AdaptiveLoss(nn.BCEWithLogitsLoss())
 def get_critic(data_crit, metrics):
+    wd = 1e-3
+    loss_crit = AdaptiveLoss(nn.BCEWithLogitsLoss())
     return Learner(data_crit, gan_critic(), metrics=metrics,
                    loss_func=loss_crit, wd=wd)
 
 
 def refresh_gan(version, crit_thresh=0.65, loss_weights=(1.,50.), bs=1, size=320, p=1.):
+    wd = 1e-3
     data_gen = get_generator_data(bs, size, p)
     data_crit = get_critic_data([grayscale, color], bs=bs, size=size)
     generator = get_generator(data_gen)

@@ -31,7 +31,7 @@ function colorizeImage() {
     // send image to server
     let request = new XMLHttpRequest();
     let loc = window.location;
-    request.open("POST", `${loc.protocol}\/\/${loc.hostname}:${loc.port}/colorizeImage`);
+    request.open("POST", `${loc.protocol}\/\/${loc.hostname}:${loc.port}/colorizeImageWeb`);
     request.responseType = 'blob';
     request.onload = function(e) {
         if (request.readyState === request.DONE && request.status >= 200 && request.status <= 299) {
