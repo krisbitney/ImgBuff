@@ -1,0 +1,7 @@
+*.pth
+.gitignore
+Dockerfile
+README.md
+*.docx
+*.ipynb
+NN_training_pipeline.html

@@ -1,0 +1,4 @@
+/app/colorizer.pkl
+/app/images/*.jpg
+*.pth
+*.db
