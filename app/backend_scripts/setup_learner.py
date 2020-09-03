@@ -5,7 +5,7 @@ from PIL import Image as Image
 from fastai.basic_train import Learner
 from fastai.vision import Image as FImage, pil2tensor
 
-from app.build_nn import refresh_gan
+from app.backend_scripts.build_nn import refresh_gan
 
 
 async def setup_learner(download_url: str, target_dir: Path, target_fn: str, load_from_path: Path) -> Learner:
